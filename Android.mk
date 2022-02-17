@@ -25,7 +25,8 @@ wificond_includes := \
 include $(CLEAR_VARS)
 LOCAL_MODULE := wificond
 LOCAL_CPPFLAGS := $(wificond_cpp_flags)
-LOCAL_INIT_RC := wificond.rc
+# remove it
+# LOCAL_INIT_RC := wificond.rc
 LOCAL_C_INCLUDES := $(wificond_includes)
 LOCAL_SRC_FILES := \
     main.cpp

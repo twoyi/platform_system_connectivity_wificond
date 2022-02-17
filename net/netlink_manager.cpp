@@ -196,6 +196,7 @@ bool NetlinkManager::Start() {
     LOG(DEBUG) << "NetlinkManager is already started";
     return true;
   }
+#if 0
   bool setup_rt = SetupSocket(&sync_netlink_fd_);
   if (!setup_rt) {
     LOG(ERROR) << "Failed to setup synchronous netlink socket";
@@ -228,7 +229,7 @@ bool NetlinkManager::Start() {
   if (!SubscribeToEvents(NL80211_MULTICAST_GROUP_MLME)) {
     return false;
   }
-
+#endif
   started_ = true;
   return true;
 }
